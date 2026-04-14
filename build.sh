@@ -1,0 +1,1 @@
+g++ -std=c++17 main.cpp Collision.cpp Render.cpp RigidBody.cpp Utils.cpp constants.cpp -o app -I/opt/homebrew/include -L/opt/homebrew/lib -lSDL2 -lSDL2_gfx -framework OpenGL

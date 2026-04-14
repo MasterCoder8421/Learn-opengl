@@ -132,24 +132,24 @@ int main(int argc, char* args[])
             body1.name = "body1";
             body2.name = "body2";
 
-            int gridCols = 4;
+            int gridCols = 3;
             int gridRows = 5;
             float cellWidth = 80;
             float cellHeight = 80;
 
 
-            // for (int row = 0; row < gridRows; row++) {
-            //     for (int col = 0; col < gridCols; col++) {
-            //         float x = col * cellWidth + cellWidth / 2 + 100 + row * 10;
-            //         float y = row * cellHeight + cellHeight / 2;
+            for (int row = 0; row < gridRows; row++) {
+                for (int col = 0; col < gridCols; col++) {
+                    float x = col * cellWidth + cellWidth / 2 + 100 + row * 10;
+                    float y = row * cellHeight + cellHeight / 2;
 
-            //         RigidBody* gridBody = new RigidBody{x, y, cellWidth*0.4f, cellHeight*0.4f, 0.04};
+                    RigidBody* gridBody = new RigidBody{x, y, cellWidth*0.4f, cellHeight*0.4f, 0.04};
 
-            //         physicsEngine.addBody(gridBody);
-            //     }
-            // }
-            physicsEngine.addBody(&body1);
-            physicsEngine.addBody(&body2);
+                    physicsEngine.addBody(gridBody);
+                }
+            }
+            // physicsEngine.addBody(&body1);
+            // physicsEngine.addBody(&body2);
             physicsEngine.addBody(&floor);
             physicsEngine.addBody(&ceil);
             physicsEngine.addBody(&wall1);
